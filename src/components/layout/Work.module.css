@@ -1,0 +1,6 @@
+.work {
+  background-color: var(--main-bg1-color);
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  position: relative;
+}

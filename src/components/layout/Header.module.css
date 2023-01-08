@@ -1,0 +1,69 @@
+header {
+  background-color: var(--main-bg2-color);
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-container {
+}
+.logo {
+  width: 120px;
+}
+.links {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .links {
+    display: none;
+    background-color: #001a50;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 14px 12px 0 #002268;
+    transition: top var(--main-transition);
+  }
+  .links.open {
+    display: flex;
+    animation: to-top var(--main-transition) linear forwards;
+  }
+  .links li {
+    margin-bottom: 10px;
+  }
+}
+.links li a {
+  margin-left: 20px;
+  font-size: 1.1rem;
+}
+.links li a.active {
+  border-bottom: 1px solid aliceblue;
+}
+.contact-icon {
+  margin-left: 10px;
+}
+.button-container {
+  display: flex;
+  align-items: center;
+}
+.burgar-icon {
+  margin-left: 20px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .burgar-icon {
+    display: none;
+  }
+}
+/* Start Animation */
+@keyframes to-top {
+  to {
+    top: 60px;
+  }
+}
+/* End Animation */

@@ -1,0 +1,55 @@
+.about {
+  background-color: var(--main-bg1-color);
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  position: relative;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  width: 50%;
+  align-items: center;
+  height: 100%;
+}
+.text .title {
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 1px solid aliceblue;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.about-text {
+  line-height: 2.3;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .text {
+    width: 90%;
+    text-align: center;
+  }
+  .text .title {
+    margin: 20px auto;
+  }
+  .text button {
+    margin: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-text {
+    line-height: 2;
+    letter-spacing: 0;
+  }
+}
+
+.contact-icon {
+  margin-left: 10px;
+}

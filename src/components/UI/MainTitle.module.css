@@ -1,0 +1,68 @@
+.main-title {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 80px;
+  border: 2px solid white;
+  padding: 2px 15px;
+  position: relative;
+  z-index: 2;
+  transition: var(--main-transition);
+  text-transform: uppercase;
+}
+.main-title::before,
+.main-title::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  transition: var(--main-transition);
+}
+.main-title::before {
+  left: -30px;
+}
+.main-title::after {
+  right: -30px;
+}
+.main-title:hover {
+  color: var(--main-bg-color);
+}
+.main-title:hover::before {
+  animation: heading-animation-left var(--main-transition) forwards;
+}
+.main-title:hover::after {
+  animation: heading-animation-right var(--main-transition) forwards;
+}
+
+/* Start Animation */
+@keyframes heading-animation-right {
+  20% {
+    right: 0;
+    height: 100%;
+    border-radius: 0;
+  }
+  100% {
+    right: 0;
+    height: 100%;
+    border-radius: 0;
+    width: 100%;
+  }
+}
+@keyframes heading-animation-left {
+  20% {
+    left: 0;
+    height: 100%;
+    border-radius: 0;
+  }
+  100% {
+    left: 0;
+    height: 100%;
+    border-radius: 0;
+    width: 100%;
+  }
+}
+/* End Animation */
